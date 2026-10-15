@@ -1,0 +1,11 @@
+{
+  "Group": "Misc",
+  "FriendlyName": "Headless API",
+  "SystemName": "Misc.HeadlessApi",
+  "Version": "1.00",
+  "SupportedVersions": [ "5.00" ],
+  "Author": "innovapps",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Misc.HeadlessApi.dll",
+  "Description": "Provides a JSON API layer that encapsulates the storefront actions, so that a separate (headless) frontend can be connected to nopCommerce."
+}

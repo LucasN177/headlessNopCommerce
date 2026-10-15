@@ -1,0 +1,171 @@
+@model Nop.Plugin.Misc.HeadlessApi.Models.ConfigurationModel
+@using Nop.Plugin.Misc.HeadlessApi
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="HeadlessApiAdmin" asp-action="Configure" method="post">
+    <div class="cards-group">
+        <div class="card card-default">
+            <div class="card-body">
+                @Html.Raw(string.Format(T("Plugins.Misc.HeadlessApi.Instructions").Text, HeadlessApiDefaults.RoutePrefix))
+            </div>
+        </div>
+        <div class="card card-default">
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="Enabled" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="Enabled" />
+                        <span asp-validation-for="Enabled"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="AllowedOrigins" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AllowedOrigins" />
+                        <span asp-validation-for="AllowedOrigins"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="TokenLifetimeDays" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="TokenLifetimeDays" />
+                        <span asp-validation-for="TokenLifetimeDays"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card card-default">
+            <div class="card-header">
+                @T("Plugins.Misc.HeadlessApi.Frontend")
+            </div>
+            <div class="card-body">
+                <p>@T("Plugins.Misc.HeadlessApi.Frontend.Instructions")</p>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="FrontendUrl" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="FrontendUrl" />
+                        <span asp-validation-for="FrontendUrl"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="RewriteEmailLinks" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="RewriteEmailLinks" />
+                        <span asp-validation-for="RewriteEmailLinks"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="RedirectStorefrontPagesToFrontend" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="RedirectStorefrontPagesToFrontend" />
+                        <span asp-validation-for="RedirectStorefrontPagesToFrontend"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="PasswordRecoveryUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="PasswordRecoveryUrlTemplate" />
+                        <span asp-validation-for="PasswordRecoveryUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="AccountActivationUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="AccountActivationUrlTemplate" />
+                        <span asp-validation-for="AccountActivationUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="EmailRevalidationUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="EmailRevalidationUrlTemplate" />
+                        <span asp-validation-for="EmailRevalidationUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="NewsletterActivationUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="NewsletterActivationUrlTemplate" />
+                        <span asp-validation-for="NewsletterActivationUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="OrderDetailsUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="OrderDetailsUrlTemplate" />
+                        <span asp-validation-for="OrderDetailsUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ShipmentDetailsUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ShipmentDetailsUrlTemplate" />
+                        <span asp-validation-for="ShipmentDetailsUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ProductUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ProductUrlTemplate" />
+                        <span asp-validation-for="ProductUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="CheckoutCompletedUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="CheckoutCompletedUrlTemplate" />
+                        <span asp-validation-for="CheckoutCompletedUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ShoppingCartUrlTemplate" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ShoppingCartUrlTemplate" />
+                        <span asp-validation-for="ShoppingCartUrlTemplate"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-9 offset-md-3">
+                        <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                        <button type="submit" name="regenerateKey" class="btn btn-danger" formnovalidate
+                                onclick="return confirm('@T("Plugins.Misc.HeadlessApi.RegenerateKey.Confirm")');">
+                            @T("Plugins.Misc.HeadlessApi.RegenerateKey")
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
